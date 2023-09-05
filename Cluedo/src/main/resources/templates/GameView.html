@@ -3,26 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Cloedo</title>
-    <link rel="stylesheet" href="/css/mvp.css">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
 </head>
-<body>
-<table>
-    <thead>
-    <tr>
-        <th>Anrede</th>
-        <th>Name</th>
-        <th>Alter</th>
-        <th>Grösse</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="person : ${personlist}">
-        <td th:text="${person.address}"></td>
-        <td th:text="${person.name}"></td>
-        <td th:text="${person.age}"></td>
-        <td th:text="${person.height}"></td>
-    </tr>
-    </tbody>
-</table>
+<body style="width: 100%">
+<div style="{width: 100%; display: flex; justify-content: center}">
+    <table>
+        <thead>
+        <tr>
+            <th>Anrede</th>
+            <th>Name</th>
+            <th>Alter</th>
+            <th>Grösse</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person : ${personlist}">
+            <td th:text="${person.address}"></td>
+            <td th:text="${person.name}"></td>
+            <td th:text="${person.age}"></td>
+            <td th:text="${person.height}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Material</th>
+            <th>Länge</th>
+            <th>Gewicht</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="weapon : ${weaponlist}">
+            <td th:text="${weapon.name}"></td>
+            <td th:text="${weapon.material}"></td>
+            <td th:text="${weapon.lenght}"></td>
+            <td th:text="${weapon.weight}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Grösse</th>
+            <th>Farbe</th>
+            <th>Merkmale</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="room : ${roomlist}">
+            <td th:text="${room.name}"></td>
+            <td th:text="${room.size}"></td>
+            <td th:text="${room.color}"></td>
+            <td th:text="${room.characteristic}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

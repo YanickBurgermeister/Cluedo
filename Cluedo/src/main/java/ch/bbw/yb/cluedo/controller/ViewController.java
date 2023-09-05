@@ -12,10 +12,12 @@ public class ViewController {
     @Autowired
     private DataService service;
 
-    @GetMapping("/personlist")
-    public String showPersons(Model model) {
+    @GetMapping("/")
+    public String showLists(Model model) {
         System.out.println("ViewController.showPersons");
         model.addAttribute("personlist", service.getPersons());
+        model.addAttribute("weaponlist", service.getWeapons());
+        model.addAttribute("roomlist", service.getRooms());
         return "GameView";
     }
 }
